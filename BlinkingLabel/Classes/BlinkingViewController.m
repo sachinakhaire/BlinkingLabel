@@ -9,6 +9,9 @@
 #import "BlinkingViewController.h"
 
 @interface BlinkingViewController ()
+{
+    UILabel *label;
+}
 
 @end
 
@@ -16,22 +19,31 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+}
+
+- (void)createLabel:(UIViewController*)controller
+{
+    label=[[UILabel alloc]initWithFrame:CGRectMake(10, 70, 50, 50)];//Set frame of label in your viewcontroller.
+    [label setBackgroundColor:[UIColor lightGrayColor]];//Set background color of label.
+    [label setText:@"Label"];//Set text in label.
+    [label setTextColor:[UIColor blackColor]];//Set text color in label.
+    [label setTextAlignment:NSTextAlignmentCenter];//Set text alignment in label.
+    [label setBaselineAdjustment:UIBaselineAdjustmentAlignBaselines];//Set line adjustment.
+    [label setLineBreakMode:NSLineBreakByCharWrapping];//Set linebreaking mode..
+    [label setNumberOfLines:1];//Set number of lines in label.
+    [label.layer setCornerRadius:25.0];//Set corner radius of label to change the shape.
+    [label.layer setBorderWidth:2.0f];//Set border width of label.
+    [label setClipsToBounds:YES];//Set its to YES for Corner radius to work.
+    [label.layer setBorderColor:[UIColor blackColor].CGColor];//Set Border color.
+    [controller.view addSubview:label];
+    NSLog(@"createLabel");
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

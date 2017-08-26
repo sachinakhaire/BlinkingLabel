@@ -1,0 +1,23 @@
+PODS:
+  - BlinkingLabel (0.1.0)
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+
+DEPENDENCIES:
+  - BlinkingLabel (from `../`)
+  - FBSnapshotTestCase
+
+EXTERNAL SOURCES:
+  BlinkingLabel:
+    :path: ../
+
+SPEC CHECKSUMS:
+  BlinkingLabel: 4e3d86afcdae6ec6a60054490974d79adf925d64
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+
+PODFILE CHECKSUM: 6edc51aef382217485fb0d13875160999d43be76
+
+COCOAPODS: 1.2.1

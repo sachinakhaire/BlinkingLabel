@@ -7,8 +7,12 @@
 //
 
 #import "socialannexViewController.h"
+#import <BlinkingLabel/BlinkingViewController.h>
 
 @interface socialannexViewController ()
+{
+    BlinkingViewController *objc;
+}
 
 @end
 
@@ -17,7 +21,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    objc = [[BlinkingViewController alloc] init];
+    [objc createLabel:self];
 }
 
 - (void)didReceiveMemoryWarning

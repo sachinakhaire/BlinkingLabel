@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface BlinkingViewController : UIViewController
-
+- (void)createLabel:(UIViewController*)controller;
 @end
